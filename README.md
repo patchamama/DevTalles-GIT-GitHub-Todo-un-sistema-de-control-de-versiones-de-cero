@@ -85,4 +85,6 @@ git config --global alias.lg "log --graph --abbrev-commit --decorate --format=fo
 git config --global -e
 ```
 
+### [Sección 3: Un poco más allá de los fundamentos de GIT](https://cursos.devtalles.com/courses/take/git-github-control-versiones/lessons/35329546-introduccion-a-la-seccion)
+
 ### Documentación
