@@ -53,4 +53,21 @@ git config core.autocrlf true
 git checkout -- .
 ```
 
+- Ramas / Branches (lugar donde nos encontramos trabajando)
+
+```
+# Conocer rama activa
+git branch
+# cambiar el nombre de la rama (renombrar). En este caso renombra "master" a "main":
+git branch -m master main
+# definir el nombre de la rama principal por defecto: main, master...
+git config --global init.defaultBranch <name>
+
+# Agregar y hacer commit de archivos con seguimiento (tracked)
+git commit -am "mensaje"
+
+# ver commits hechos de más reciente a más viejo
+git log
+```
+
 ### Documentación
