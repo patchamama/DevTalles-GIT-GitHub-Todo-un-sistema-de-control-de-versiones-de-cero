@@ -1,24 +1,13 @@
-# DevTalles-GIT-GitHub-Todo-un-sistema-de-control-de-versiones-de-cero
+## dev/Talles: GIT+GitHub: Todo un sistema de control de versiones de cero
 
-## Description
+_https://cursos.devtalles.com/courses/take/git-github-control-versiones_
 
-## Installation
+## Secciones
 
-## Usage
+### [Sección 1: Inicio del curso]()
 
-## Contributing
+- [Instalaciones necesarias](https://cursos.devtalles.com/courses/take/git-github-control-versiones/lessons/35323631-objetivos-del-curso)
 
-## License
+### [Sección 2: Git - Fundamentos](https://cursos.devtalles.com/courses/take/Astro/lessons/55900239-introduccion-a-la-seccion)
 
-## Project status
-
-## Author
-
-## Acknowledgements
-
-## Contact
-
-## Project link
-
-## Project dependencies
-
+### Documentación
