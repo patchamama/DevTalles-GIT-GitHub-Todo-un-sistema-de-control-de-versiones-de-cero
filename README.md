@@ -39,6 +39,10 @@ git status
 git add <archivo o carpeta a agregar>
 # añadir todo
 git add .
+# añadir todos los html y los js de la carpeta js
+git add *.html js/*.js
+# Sí una carpeta está vacía, git no la agrega a los untracked, para que git agregue la carpeta,
+# dentro de esta se agrega un archivo de nombre .gitkeep vacío
 
 # eliminar archivo del seguimiento (stage)
 git reset <archivo o carpeta>
@@ -68,6 +72,17 @@ git commit -am "mensaje"
 
 # ver commits hechos de más reciente a más viejo
 git log
+```
+
+# Creando Alias para nuestros comandos
+
+```
+# git s > git status --short
+git config --global alias.s "status -sb"
+# git lg > git log --online --decorate --all --graph ...
+git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+# modificar los alias en el archivo de configuración
+git config --global -e
 ```
 
 ### Documentación
