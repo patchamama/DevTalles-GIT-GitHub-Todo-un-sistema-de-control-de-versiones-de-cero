@@ -8,6 +8,6 @@ _https://cursos.devtalles.com/courses/take/git-github-control-versiones_
 
 - [Instalaciones necesarias](https://cursos.devtalles.com/courses/take/git-github-control-versiones/lessons/35323631-objetivos-del-curso)
 
-### [Sección 2: Git - Fundamentos](https://cursos.devtalles.com/courses/take/Astro/lessons/55900239-introduccion-a-la-seccion)
+### [Sección 2: Git - Fundamentos](https://cursos.devtalles.com/courses/take/git-github-control-versiones/lessons/35324134-introduccion-a-los-fundamentos-de-git)
 
 ### Documentación
