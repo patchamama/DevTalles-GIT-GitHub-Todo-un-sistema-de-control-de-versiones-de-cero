@@ -101,13 +101,28 @@ git diff --staged
 ```
 # Actualizar el mensaje del último commit para corregirlo
 git commit --amend -m "nuevo mensaje actualizado"
+# Editar el último mensaje y corregir el texto
+git commit --amend
 # La forma larga sería moverse al git anterior sin perder los cambios, agregar archivos y hacer nuevamente el commit
 git reset --soft HEAD^
 git add .
 git commit -m "nuevo mensaje actualizado"
 
-# Moverse a un commit determinado
+# Moverse a un commit determinado y hacer uso de esa versión
 git reset --soft <hash>
+```
+
+- Viajes en el tiempo, resets y reflog
+
+```
+# Moverse a un determinado cambio sin eliminar los cambios
+git reset --soft <hash>
+
+# Cuidado! Dejar el respositorio exactamente a como estaba en un punto del tiempo y se pierde del git log el historial pero puede verse todo lo hecho con git reflog
+git reset --hard <hash>
+
+# Ver todos los cambios realizados o historial completamente que permite acceder a cualquier hash incluso los que no aparecen "git status" usando git reset...
+git reflog
 ```
 
 ### Documentación
