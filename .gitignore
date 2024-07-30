@@ -1,0 +1,7 @@
+Curso-Git/
+
+dist/
+node_modules/
+.env
+.env.py
+*.log
