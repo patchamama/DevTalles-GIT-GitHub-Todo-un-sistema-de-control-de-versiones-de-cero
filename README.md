@@ -191,4 +191,4 @@ git tag -a v0.1.0 <hash> -m "version Alpha de nuestra app"
 git show <nombre-del-tag>
 ```
 
-### Documentación
+### Introducción a la sección - Stash
