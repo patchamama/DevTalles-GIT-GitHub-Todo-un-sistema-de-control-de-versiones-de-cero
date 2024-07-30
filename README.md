@@ -87,4 +87,27 @@ git config --global -e
 
 ### [Sección 3: Un poco más allá de los fundamentos de GIT](https://cursos.devtalles.com/courses/take/git-github-control-versiones/lessons/35329546-introduccion-a-la-seccion)
 
+- Cambios en los archivos
+
+```
+# ver los cambios de archivos antes del staged (commit)
+git diff
+# ver lo que se cambió en el staged en relación al último push
+git diff --staged
+```
+
+- Actualizar mensaje del commit y revertir commits
+
+```
+# Actualizar el mensaje del último commit para corregirlo
+git commit --amend -m "nuevo mensaje actualizado"
+# La forma larga sería moverse al git anterior sin perder los cambios, agregar archivos y hacer nuevamente el commit
+git reset --soft HEAD^
+git add .
+git commit -m "nuevo mensaje actualizado"
+
+# Moverse a un commit determinado
+git reset --soft <hash>
+```
+
 ### Documentación
