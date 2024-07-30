@@ -47,6 +47,9 @@ git add *.html js/*.js
 # eliminar archivo del seguimiento (stage)
 git reset <archivo o carpeta>
 
+# eliminar solo el archivo o carpeta del staged y no de local
+git rm -r --cached nombre_de_la_carpeta_o_archivo/
+
 # agregar archivos al stage local
 git commit -m "Primer commit"
 
