@@ -152,4 +152,6 @@ node_modules/
 
 - [Ejercicios a resolver y ayuda](https://patchamama.github.io/DevTalles-GIT-GitHub-Todo-un-sistema-de-control-de-versiones-de-cero/)
 
+### Sección 4: Ramas, uniones, conflictos y tags
+
 ### Documentación
