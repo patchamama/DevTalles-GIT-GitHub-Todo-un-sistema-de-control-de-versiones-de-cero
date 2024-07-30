@@ -147,6 +147,6 @@ node_modules/
 *.log
 ```
 
-- [Ejercicios a resolver y ayuda]()
+- [Ejercicios a resolver y ayuda](https://patchamama.github.io/DevTalles-GIT-GitHub-Todo-un-sistema-de-control-de-versiones-de-cero/)
 
 ### Documentación
