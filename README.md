@@ -154,4 +154,41 @@ node_modules/
 
 ### Sección 4: Ramas, uniones, conflictos y tags
 
+```
+# Crear rama
+git branch <nueva-rama>
+# Cambiar de rama
+git checkout <rama>
+# con un solo comando crear y cambiar de rama
+git checkout -b <nueva-rama>
+
+# Hacer un merge de una rama en otra. Hay que ubicarse en la rama de destino como activa
+git checkout <rama-destino>
+git merge <rama-fuente>
+
+# Eliminar una rama
+git branch -d <nombre-de-rama>
+```
+
+- Creando etiquetas - Tags
+
+Los _tags_ son mensajes o etiqueta que se le pone al último commit tal como una versión información de un release.
+
+```
+# Ver todos los tag que existen
+git tag
+# Agregar un tag
+git tag <nombre-del-tag>
+# Eliminar un tag
+git tag -d <nombre-del-tag>
+
+# Usando versión semántica
+git tag -a v1.0.0 -m "Version 1.0.0 lista"
+# Poner una versión a un commit determinado usando el hash
+git tag -a v0.1.0 <hash> -m "version Alpha de nuestra app"
+
+# Ver detalles de una etiqueta
+git show <nombre-del-tag>
+```
+
 ### Documentación
