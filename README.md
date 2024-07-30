@@ -135,4 +135,16 @@ git mv <archivo-inicial> <nuevo-nombre>
 git rm <nombre-de-archivo>
 ```
 
+- Ignorando archivos que no deseamos
+
+Se debe de crear una archivo de nombre `.gitignore` donde se especifican todos los archivos y directorios a los que no se desea dar seguimiento, por ejemplo:
+
+```
+dist/
+node_modules/
+.env
+.env.py
+*.log
+```
+
 ### Documentación
