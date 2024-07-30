@@ -125,4 +125,14 @@ git reset --hard <hash>
 git reflog
 ```
 
+- Cambiar el nombre y eliminar archivos mediante git
+
+```
+# Renombrar un archivo en que estamos trabajando en la carpeta local y en el staged
+git mv <archivo-inicial> <nuevo-nombre>
+
+# Eliminar un archivo local y marcarlo como eliminado en el staged (que ya está en el staged), es necesario hacer un commit para que se elimine completamente en el staged
+git rm <nombre-de-archivo>
+```
+
 ### Documentación
