@@ -58,6 +58,8 @@ git config core.autocrlf true
 
 # Restaurar el proyecto a como estaba en el último commit, reconstruyendo los directorios y archivos que tenían seguimiento
 git checkout -- .
+# Solo restaurar un archivo modificado
+git checkout -- <archivo-a-restaurar>
 ```
 
 - Ramas / Branches (lugar donde nos encontramos trabajando)
@@ -192,3 +194,57 @@ git show <nombre-del-tag>
 ```
 
 ### Introducción a la sección - Stash
+
+_Permite tener todos los cambios seguros, guardándolos en un espacio temporal local para posteriormente retomarlo, incluso lo que no se han grabado en la rama_
+_WIP: work in progress al hacer un git lg significa que es un stash hecho en ese punto_
+
+```
+# Guardar el estado actual del proyecto en la rama activa solamente
+git stash
+# Listar los stash realizados
+git stash list
+# Restaurar el último stash guardado y borra el estado actual del proyecto
+git stash pop
+# Eliminar todos los stash creados (solo serían visibles con git reflog)
+git stash clear
+# Eliminar un stash
+git stash drop <stash>
+# Restaurar un stash determinado tras listarlo (git stash list). stash@{0} es como un hash
+git stash apply <stash>
+# Ver los cambios de un determinado stash (el stash@{1})
+git stash show <stash>
+# Grabar un stash con un nombre determinado
+git stash save "mensaje del stash"
+# Listar con más detalles los stash realizados y cambios
+git stash list --stat
+```
+
+- Rebase - Actualizando ramas
+
+_Muchas veces se crea una rama features-branch para desarrollar algunas funcionalidades y a la vez en la rama master-main se agregan después otros cambios pero deseamos que los cambios de la rama main se pasen a la feature-branch pues los necesitamos (esto también ayuda muchas veces para solucionar conflictos). En este caso, lo mejor es ubicarnos en la feature-branch y después insertar los cambios de la rama main: git rebase main. Después es muy fácil hacer un merge a la rama master al no haber conflictos_
+
+```
+# Ubicarse en la rama feature-branch
+git checkout <branch>
+# Insertar los cambios de la rama main a esta
+git rebase main
+# Sí se desea hacer un merge del feature-branch a master-main ahora es  muy fácil al no haber conflictos y se haría un "fast-forward" con:
+git checkout main
+git merge <feature-branch>
+```
+
+- Unir ramas (squash) o renombrarlas
+
+_El pick no hace nada, lo tiene en cuenta o toma simplemente. Para acambiar el nombre del mensaje hay que cambiar el pick por reword_
+
+```
+# Trabajar con los últimos 4 commits para unir una rama en otra. Se cambia el pick por squash frente a la línea y esto permite que este commit se una con el anterior.
+git rebase -i HEAD~4
+```
+
+### Documentation
+
+- https://git-scm.com/docs/git-stash
+- https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Reorganizar-el-Trabajo-Realizado (git rebase...)
+
+## Sección 6: Inicios en GitHub, Git Remote, Push & Pull
