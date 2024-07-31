@@ -249,3 +249,28 @@ git rebase -i HEAD~4
 - https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Reorganizar-el-Trabajo-Realizado (git rebase...)
 
 ## Sección 6: Inicios en GitHub, Git Remote, Push & Pull
+
+- Hosted services:
+  - BitBucket
+  - GitHub
+
+* Manejados por nosotros mismos:
+  - Gitosis
+
+```
+# Agregar un repositorio remoto
+git remote add origin <URL>
+# Conocer los repo remotos que tenemos configurados
+git remote -v
+# Copiar un cambio al servidor remoto
+git push -u origin master
+    _(-u permite que se especifique por defecto en que rama se llevarán los cambios a realizar y master es la rama a actualizar)_
+
+```
+
+### Documentación
+
+- ¿Qué es Gitosis? https://wiki.archlinux.org/title/gitosis#:~:text=Gitosis%20is%20a%20tool%20which,system%20accounts%20on%20the%20server.
+- Instalación y configuración https://github.com/res0nat0r/gitosis
+- Guardar su usuario y contraseña en la máquina LINUX
+  - Para usuario de OSx 10.0 o superior, el KeyChain se los maneja automáticamente. https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git#platform-linux
