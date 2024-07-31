@@ -235,7 +235,8 @@ git merge <feature-branch>
 
 - Unir ramas (squash) o renombrarlas
 
-_El pick no hace nada, lo tiene en cuenta o toma simplemente. Para acambiar el nombre del mensaje hay que cambiar el pick por reword_
+_El git rebase -i... lo que hace es editar manualmente varias commits y permite borrar algún commit, unirlos, cambiar el mensaje..._
+_El pick no hace nada, lo tiene (el commit) en cuenta o lo toma simplemente. Para acambiar el nombre del mensaje hay que cambiar el pick por reword_
 
 ```
 # Trabajar con los últimos 4 commits para unir una rama en otra. Se cambia el pick por squash frente a la línea y esto permite que este commit se una con el anterior.
