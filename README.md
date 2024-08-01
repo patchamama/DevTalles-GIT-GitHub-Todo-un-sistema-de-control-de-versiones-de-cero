@@ -196,6 +196,8 @@ git show <nombre-del-tag>
 git push --tags
 ```
 
+_Una vez creados tags, es posible crear con estos releases y a estos subir binarios que pueden ser descargados_
+
 ### Introducción a la sección - Stash
 
 _Permite tener todos los cambios seguros, guardándolos en un espacio temporal local para posteriormente retomarlo, incluso lo que no se han grabado en la rama_
