@@ -191,6 +191,9 @@ git tag -a v0.1.0 <hash> -m "version Alpha de nuestra app"
 
 # Ver detalles de una etiqueta
 git show <nombre-del-tag>
+
+# Subir todos los tags con push
+git push --tags
 ```
 
 ### Introducción a la sección - Stash
@@ -265,7 +268,24 @@ git remote -v
 # Copiar un cambio al servidor remoto
 git push -u origin master
     _(-u permite que se especifique por defecto en que rama se llevarán los cambios a realizar y master es la rama a actualizar)_
+```
 
+- Obtener últimos cambios del repositorio remoto
+
+```
+# Obtener cambios existentes en el remote de la rama main (github u otro, se puede ver con git remote -v)
+git pull origin main
+git pull <remote> <rama> (remote puede ser origin u otro agregado con git add <remote> <url>)
+```
+
+- Definir forma de resolver el pull
+
+```
+git config --global pull.ff only (fast-forward only)
+git config --global rebase off   (merge)
+git config --blobal rebase on    (rebase)
+
+git config -e                    (para comprobar la configuración existente)
 ```
 
 ### Documentación
