@@ -196,8 +196,6 @@ git show <nombre-del-tag>
 git push --tags
 ```
 
-_Una vez creados tags, es posible crear con estos releases y a estos subir binarios que pueden ser descargados_
-
 ### Introducción a la sección - Stash
 
 _Permite tener todos los cambios seguros, guardándolos en un espacio temporal local para posteriormente retomarlo, incluso lo que no se han grabado en la rama_
@@ -285,10 +283,18 @@ git pull <remote> <rama> (remote puede ser origin u otro agregado con git add <r
 ```
 git config --global pull.ff only (fast-forward only)
 git config --global rebase off   (merge)
-git config --blobal rebase on    (rebase)
+git config --global rebase on    (rebase)
 
 git config -e                    (para comprobar la configuración existente)
 ```
+
+- Clonar un proyecto
+
+```
+git clone <url-del-proyecto>
+```
+
+¡Importante! _Al hacer un git pull pueden haber conflictos y de estar especificado por defecto hacer un "fast-foward", no se ejecutará el git pull y sería necesario cambiar el tipo de pull en el config por merge o rebase tal como `git config rebase on` y después haciendo un `git pull` se haría y automáticamente se generarían los archivos con conflictos que podemos abrir y manualmente resolver los conflictos. Después estaríamos en medio de un rebase y no de una rama (esto se ve haciendo un `git status` por lo que habría que hacer un `git rebase --continue` para continuar (o --abort sí se desea abordar) y después es necesario hacer un `git commit -m` ... para comentar la acción del conflicto resuelto o merge realizado y después un git pull para que se lleve a cabo. También es posible al hacer un `git push` que se generen errores por haber cambios en el servidor remoto y en ese caso lo mejor sería hacer un àgit pull`y resolver localmente los conflictos y después el`git push`._
 
 ### Documentación
 
