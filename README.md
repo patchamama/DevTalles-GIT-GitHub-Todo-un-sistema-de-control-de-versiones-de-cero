@@ -342,3 +342,5 @@ En resumen, git fetch te permite tener un mayor control y planificación sobre l
 - Flujo de github
 
 https://blog.mergify.com/understanding-the-github-pull-request-workflow/
+
+## Sección 8: GitHub - Avanzado
