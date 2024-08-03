@@ -311,3 +311,34 @@ git clone <url-del-proyecto>
   - GitHub Markdown sheet: [GitHub Markdown Style Sheet](https://docs.github.com/en)
   - Emojis de GitHub: [Emojis](https://www.webfx.com/tools/emoji-cheat-sheet/)
   - [Markdown cheatsheet](https://import.cdn.thinkific.com/643563/courses/1870146/markdowncheatsheetonline-220524-152537.pdf) o [aquí](docs/markdowncheatsheetonline.pdf)
+
+- git pull vs git fetch
+
+git fetch solo actualiza las referencias remotas sin modificar tu directorio de trabajo.
+git pull actualiza tu directorio de trabajo y la rama actual con los cambios remotos.
+
+    git pull = git fetch + git merge/rebase
+
+Ejemplo práctico:
+Supongamos que estás trabajando en la rama main y deseas actualizarla con los últimos cambios del repositorio remoto.
+
+Usando git fetch:
+
+```
+git fetch origin
+git log origin/main   # Revisa los cambios disponibles
+git diff origin/main  # Ver cambios
+git merge origin/main # Integra los cambios en tu rama actual
+```
+
+Usando git pull:
+
+```
+git pull origin main
+```
+
+En resumen, git fetch te permite tener un mayor control y planificación sobre la integración de cambios remotos, mientras que git pull ofrece una forma rápida y conveniente de mantener tu trabajo sincronizado con el repositorio remoto.
+
+- Flujo de github
+
+https://blog.mergify.com/understanding-the-github-pull-request-workflow/
