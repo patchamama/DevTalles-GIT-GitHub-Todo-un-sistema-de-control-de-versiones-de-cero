@@ -296,11 +296,18 @@ git clone <url-del-proyecto>
 
 ¡Importante! _Al hacer un git pull pueden haber conflictos y de estar especificado por defecto hacer un "fast-foward", no se ejecutará el git pull y sería necesario cambiar el tipo de pull en el config por merge o rebase tal como `git config rebase on` y después haciendo un `git pull` se haría y automáticamente se generarían los archivos con conflictos que podemos abrir y manualmente resolver los conflictos. Después estaríamos en medio de un rebase o git interactivo y no de una rama (esto se ve haciendo un `git status` por lo que habría que hacer un `git rebase --continue` para continuar (o --abort sí se desea abordar) y después es necesario hacer un `git add <archivo-modificado>` y `git commit -m` ... para comentar la acción del conflicto resuelto o merge realizado y después un git pull para que se lleve a cabo. También es posible al hacer un `git push` que se generen errores por haber cambios en el servidor remoto y en ese caso lo mejor sería hacer un àgit pull`y resolver localmente los conflictos y después el`git push`._
 
-## Sección 7: GitHub - básico
-
 ### Documentación
 
 - ¿Qué es Gitosis? https://wiki.archlinux.org/title/gitosis#:~:text=Gitosis%20is%20a%20tool%20which,system%20accounts%20on%20the%20server.
 - Instalación y configuración https://github.com/res0nat0r/gitosis
 - Guardar su usuario y contraseña en la máquina LINUX
   - Para usuario de OSx 10.0 o superior, el KeyChain se los maneja automáticamente. https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git#platform-linux
+
+## Sección 7: GitHub - básico
+
+- MarkDown y GitHub markdown
+
+  - Tutorial de Markdown: [Markdown Tutorial](https://www.markdowntutorial.com/)
+  - GitHub Markdown sheet: [GitHub Markdown Style Sheet](https://docs.github.com/en)
+  - Emojis de GitHub: [Emojis](https://www.webfx.com/tools/emoji-cheat-sheet/)
+  - [Markdown cheatsheet](https://import.cdn.thinkific.com/643563/courses/1870146/markdowncheatsheetonline-220524-152537.pdf) o [aquí](docs/markdowncheatsheetonline.pdf)
