@@ -344,3 +344,7 @@ En resumen, git fetch te permite tener un mayor control y planificación sobre l
 https://blog.mergify.com/understanding-the-github-pull-request-workflow/
 
 ## Sección 8: GitHub - Avanzado
+
+Sí deseamos restableceer solamente un archivo de un determinado commit o branch en la rama actual es posible con:
+
+`git checkout <branch o hash commit> <archivo-a-restaurar>`
