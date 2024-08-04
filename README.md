@@ -348,3 +348,49 @@ https://blog.mergify.com/understanding-the-github-pull-request-workflow/
 Sí deseamos restableceer solamente un archivo de un determinado commit o branch en la rama actual es posible con:
 
 `git checkout <branch o hash commit> <archivo-a-restaurar>`
+
+- Feature branch - Revisando el trabajo de los compañeros
+
+Con `git pull --all` a veces no se obtienen las ramas. Para listar las ramas locales y en remoto podemos usar:
+
+`git branch --all` o `git branch -a`
+
+Para obtener la rama en remoto y trabajar con ella hay que pasarse a ella y esto obliga a que se descargue con sus contenidos:
+
+`git checkout <nombre-de-la-rama-remota>`
+
+En ocasiones, no aparece localmente sincronizado o actualizado el nombre de las ramas con relación al remote y por ejemplo, sí listamos todas las ramas puede que aparezcan ramas que se borraron en el remote. Para actualizar todo esto se puede usar:
+
+`git remote prune origin`
+
+Al borrar una rama localmente, para poder borrarla en el remote (se pone :rama-borrada):
+
+`git push origin :rama-borrada`
+
+- Proteger rama en producción
+
+Sí deseamos mantener una rama legacy o importante en producción, una forma de protegerla y tenerla accesible es asociarla a su vez a un Tag y de esa forma sí se borrara la rama, como el Tag está asociado a un commit es posible siempre usando el hash del commit, volver a crear la rama (también es posible usando `git reflog` para localizar el hash y después moverse a ese commit con `git checkout <hash>` y recrear la rama con `git checkout -b <nombre-rama-recuperada>`): Crear un Tag relacionado co la rama a proteger o de producción:
+
+```
+# Listar los tags
+git tag
+# Crear el tag nuevo relacionado con el feature-branch (producción)
+git tag -a v0.0.1 -m "Versión 0.0.1 - Stable"
+# Subir el tag
+git push --tags
+```
+
+Recuperar rama a proteger o de producción importante borrada accidentalmente y que tiene asociada un Tag:
+
+```
+# Buscar tags existentes
+git tag
+# Activar el commit asociado con la versión que nos interesa, ejemplo: v0.0.1
+git checkout v0.0.1
+# El HEAD se ubicaría en el tag (lo podemos ver con un git s) pero sin una rama asociada (se había borrado)
+git checkout -b <rama-a-recuperar>
+# Actualizar la rama previamente borrada
+git push
+```
+
+_También con `git reflog` podemos ver todo el historial y ramas y commits creados o borrados y localizar el punto en que se borró, ubicarse en este commit (`git checkout <hash-commit>`) y después crear nuevamente la rama borrada (`git checkout -b <rama-a-recuperar>` y hacer el git push. También visualmente desde github o gitlab podemos seleccionar el Tag, después desde ahí nos vamos al hash del último commit y en ese punto podemos crear una rama nueva._
