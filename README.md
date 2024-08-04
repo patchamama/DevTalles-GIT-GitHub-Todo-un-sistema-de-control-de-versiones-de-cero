@@ -396,3 +396,9 @@ git push
 _También con `git reflog` podemos ver todo el historial y ramas y commits creados o borrados y localizar el punto en que se borró, ubicarse en este commit (`git checkout <hash-commit>`) y después crear nuevamente la rama borrada (`git checkout -b <rama-a-recuperar>` y hacer el git push. También visualmente desde github o gitlab podemos seleccionar el Tag, después desde ahí nos vamos al hash del último commit y en ese punto podemos crear una rama nueva._
 
 ## Sección 9: GitHub Issues, MileStones y Colaboradores
+
+### Documentación
+
+- https://guides.github.com/features/issues/
+
+## Sección 10: Wikis, Proyectos y GitHub Pages
