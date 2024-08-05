@@ -411,3 +411,5 @@ https://gist.github.com
 
 VSCode Extension: https://marketplace.visualstudio.com/items?itemName=kenhowardpdx.vscode-gist
 _Con esta extensión es posible hacer búsquedas e insertar código/snippets de mis gists personales. Para usarlo antes hay que generar un token desde el setting de github y en vscode hay que acceder desde el command palette (Ctrl-Shift-P) a "gist: Profile... > github.com" e ingresar al token que genereremos desde github > settings > Developer Settings > Personal access tokens > Tokens (classic) > generate new token > ponerle un nombre y solo marcar la opción de Select Scopes: gist. Una vez configurado, accediendo al command palette > gist : open gist podemos hacer búsquedas y seleccionar alguno._
+
+## Sección 13: Fin del curso
