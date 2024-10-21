@@ -4,7 +4,7 @@ _https://cursos.devtalles.com/courses/take/git-github-control-versiones_
 
 ## Más referenciado
 
-- Solucionar error que no me permite hacer un `git push` pues mi punto de actualización está atrasado en relación al remoto.
+- Solucionar error que no me permite hacer un `git push` pues mi punto de actualización está atrasado (behind) en relación al remoto.
 
 > Lo mejor pudiera hacer un rebase con un git pull y solucionar los conflictos en local y después el push.
 > Si prefieres mantener un historial más limpio, puedes usar rebase en lugar de merge.
