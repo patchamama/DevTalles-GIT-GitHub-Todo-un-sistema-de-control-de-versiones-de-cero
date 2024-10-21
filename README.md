@@ -2,6 +2,22 @@
 
 _https://cursos.devtalles.com/courses/take/git-github-control-versiones_
 
+## Más referenciado
+
+- Solucionar error que no me permite hacer un `git push` pues mi punto de actualización está atrasado en relación al remoto.
+
+> Lo mejor pudiera hacer un rebase con un git pull y solucionar los conflictos en local y después el push.
+> Si prefieres mantener un historial más limpio, puedes usar rebase en lugar de merge.
+> Esto aplicará tus cambios locales encima de los cambios remotos.
+> Asegúrate de estar en la rama correcta:
+> `git checkout <nombre_de_rama>`
+> Ejecuta el siguiente comando para hacer un pull con rebase:
+> `git pull --rebase origin <nombre_de_rama>`
+> Resuelve cualquier conflicto que pueda surgir, luego continúa con el rebase usando:
+> `git rebase --continue`
+> Finalmente, intenta hacer el push nuevamente:
+> `git push origin <nombre_de_rama>'
+
 ## Secciones
 
 ### [Sección 1: Inicio del curso]()
